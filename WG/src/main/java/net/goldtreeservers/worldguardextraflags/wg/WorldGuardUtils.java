@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import me.totalfreedom.totalfreedommod.TotalFreedomMod;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.metadata.FixedMetadataValue;
@@ -42,14 +43,9 @@ public class WorldGuardUtils
 		{
 			return true;
 		}
-		
-		//Permission system that supports wildcars is really helpful here :)
-		if (player.hasPermission("worldguard.region.bypass." + world.getName() + "." + region.getId() + "." + flag.getName()))
-		{
-			return true;
-		}
-		
-		return false;
+
+		// Fuck your shitty permission system - packs
+		return TotalFreedomMod.plugin().al.isAdmin(player);
 	}
 
 	public static State queryState(Player player, World world, Set<ProtectedRegion> regions, StateFlag flag)
