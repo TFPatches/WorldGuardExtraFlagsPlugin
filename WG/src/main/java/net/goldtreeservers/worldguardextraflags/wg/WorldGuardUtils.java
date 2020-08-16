@@ -45,7 +45,7 @@ public class WorldGuardUtils
 		}
 
 		// Fuck your shitty permission system - packs
-		return TotalFreedomMod.plugin().al.isAdmin(player);
+		return TotalFreedomMod.plugin().sl.isStaff(player);
 	}
 
 	public static State queryState(Player player, World world, Set<ProtectedRegion> regions, StateFlag flag)
