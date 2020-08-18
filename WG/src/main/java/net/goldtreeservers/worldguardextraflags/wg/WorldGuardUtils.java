@@ -45,7 +45,7 @@ public class WorldGuardUtils
 		}
 
 		// Fuck your shitty permission system - packs
-		return TFMHandler.isStaff(player);
+		return TFMHandler.isStaff(player.getName());
 	}
 
 	public static State queryState(Player player, World world, Set<ProtectedRegion> regions, StateFlag flag)

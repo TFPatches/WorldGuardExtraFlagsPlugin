@@ -18,16 +18,15 @@ public class TFMHandler
         Plugin plugin = Bukkit.getPluginManager().getPlugin("TotalFreedomMod");
         if (plugin != null && plugin.isEnabled())
         {
-            TotalFreedomMod tfm = (TotalFreedomMod)plugin;
-            totalFreedomMod = tfm;
+            totalFreedomMod = (TotalFreedomMod)plugin;
             return totalFreedomMod;
         }
 
         return null;
     }
 
-    public static boolean isStaff(CommandSender sender)
+    public static boolean isStaff(String name)
     {
-        return getTFM().sl.isStaff(sender);
+        return getTFM().sl.getEntryByName(name) != null;
     }
 }
