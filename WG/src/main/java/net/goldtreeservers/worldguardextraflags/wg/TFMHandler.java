@@ -27,6 +27,6 @@ public class TFMHandler
 
     public static boolean isStaff(String name)
     {
-        return getTFM().sl.getEntryByName(name) != null;
+        return getTFM().al.getEntryByName(name) != null;
     }
 }
